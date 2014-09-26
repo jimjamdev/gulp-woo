@@ -6,6 +6,7 @@ var gulp = require('gulp');
 // Browser Sync
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var uncss = require('gulp-uncss');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -16,7 +17,10 @@ gulp.task('styles', function () {
             style: 'expanded',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.autoprefixer('last 10 version'))
+        .pipe(uncss({
+            html: ['app/index.html']
+        }))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size())
         .pipe(reload({stream:true}));
