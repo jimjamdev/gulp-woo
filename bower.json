@@ -1,0 +1,10 @@
+{
+  "name": "gulp-woo",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "woocss": "https://github.com/jimmyjamieson/woocss.git"
+  }
+}
