@@ -3,6 +3,10 @@
 
 var gulp = require('gulp');
 
+// Browser Sync
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
+
 // load plugins
 var $ = require('gulp-load-plugins')();
 
@@ -14,7 +18,8 @@ gulp.task('styles', function () {
         }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('.tmp/styles'))
-        .pipe($.size());
+        .pipe($.size())
+        .pipe(reload({stream:true}));
 });
 
 gulp.task('scripts', function () {
