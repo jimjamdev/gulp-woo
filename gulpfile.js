@@ -36,7 +36,7 @@ gulp.task('styles', function () {
             style: 'compressed',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 10 version'))
+        .pipe($.autoprefixer('last 5 version'))
         .pipe(uncss({
             html: ['app/index.html']
         }))
