@@ -1,33 +1,64 @@
-<!doctype html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>gulp woo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="css/main.css">
-        <!-- endbuild -->
-
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang="en">
+    <![endif]-->
+    <!--[if IE 7]>
+    <html class="no-js ie7 oldie" lang="en">
         <![endif]-->
+        <!--[if IE 8]>
+        <html class="no-js ie8 oldie" lang="en">
+            <![endif]-->
+            <!--[if IE 9]>
+            <html class="no-js ie9 oldie" lang="en">
+                <![endif]-->
+                <!--[if gt IE 9]>
+                <!-->
+                <html class="no-js" lang="en">
+                    <!--<![endif]-->
+<head>
+                    <meta charset="utf-8">
+                    <title>gulp woo</title>
+                    <meta name="description" content="">
+                    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+                    <!--[if lt IE 9]>
+                    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('main');
+        document.createElement('aside');
+        document.createElement('footer');
+        </script>
+                    <script src="../old.browser.js"></script>
+                    <![endif]-->
 
-        <div class="hero-unit">
-            <h1>Web App</h1>
-        </div>
+                    <!-- build:css styles/vendor.css -->
+                    <!-- bower:css -->
+                    <!-- endbower -->
+                    <!-- endbuild -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+                    <!-- build:css styles/main.css -->
+                    <link rel="stylesheet" href="css/main.css">
+                    <!-- endbuild -->
+
+</head>
+<body>
+                    <!--[if lt IE 10]>
+                    <p class="browsehappy">
+                        You are using an <strong>outdated</strong>
+                        browser. Please
+                        <a href="http://browsehappy.com/">upgrade your browser</a>
+                        to improve your experience.
+                    </p>
+                    <![endif]-->
+
+                    <div class="hero-unit">
+                        <h1>Web App</h1>
+                    </div>
+
+                    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+                    <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -36,14 +67,33 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+                    <!-- build:js scripts/vendor.js -->
+                    <!-- bower:js -->
+                    <!-- endbower -->
+                    <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+                    <script>
+            document.write('<script src=' +
+            ('__proto__' in {} ? '/bower_components/zepto/zepto.min' : '/bower_components/jquery/dist/jquery.min') +'.js><\/script>')</script>
+                <script src="scripts/main.js"></script>
+                <script type="text/javascript">
+            // Add a script element as a child of the body
+             function downloadJSAtOnload() {
+             var element = document.createElement("script");
+             element.src = "/bower_components/angular/angular.min.js";
+             document.body.appendChild(element);
+             }
+
+             // Check for browser support of event handling capability
+             if (window.addEventListener)
+             window.addEventListener("load", downloadJSAtOnload, false);
+             else if (window.attachEvent)
+             window.attachEvent("onload", downloadJSAtOnload);
+             else window.onload = downloadJSAtOnload;
+
+    </script>
+
+                <!-- build:js scripts/main.js -->
+                <!-- endbuild -->
 </body>
-</html>
+            </html>
