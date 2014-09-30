@@ -1,7 +1,6 @@
 @import "base";
 
-@include fadeInDown;
-
+// Include animations
 @include slideInDownBounce;
 
 * {
@@ -15,9 +14,10 @@ body {
 }
 
 .hero-unit {
-    @include animation(slideInDownBounce 0.6s);
+    @include animation(slideInDownBounce 0.8s);
+    transform: translate3d(0, 0, 0);
     margin: 50px auto 0 auto;
-    width: 300px;
+    width: 400px;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;

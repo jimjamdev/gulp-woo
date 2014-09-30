@@ -5,7 +5,7 @@ var gulp = require('gulp');
 
 // Browser Sync
 var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
+//var reload      = browserSync.reload;
 var uncss = require('gulp-uncss');
 var cssmin = require('gulp-cssmin');
 
@@ -111,8 +111,8 @@ gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
-
 /*
+
 gulp.task('connect', function () {
     var connect = require('connect');
     var app = connect()
