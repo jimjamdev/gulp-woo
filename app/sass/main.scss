@@ -1,12 +1,21 @@
 @import "base";
 
+@include fadeInDown;
+
+@include slideInDownBounce;
+
+* {
+    transition: 0.2s ease-in-out;
+}
+
 body {
     background: $blue;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $arial;
     color: #333;
 }
 
 .hero-unit {
+    @include animation(slideInDownBounce 0.6s);
     margin: 50px auto 0 auto;
     width: 300px;
     font-size: 18px;
@@ -15,11 +24,16 @@ body {
     background-color: #eee;
     border-radius: 6px;
     padding: 60px;
+    color: $blue;
     h1 {
         font-size: 60px;
         line-height: 1;
         letter-spacing: -1px;
     }
+}
+
+.uncss-empty {
+    color: #fff;
 }
 
 .browsehappy {
